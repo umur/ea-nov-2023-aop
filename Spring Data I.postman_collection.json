@@ -1,0 +1,2024 @@
+{
+	"info": {
+		"_postman_id": "ff819776-94e1-4902-969f-ea7d108aee6f",
+		"name": "Spring Data I",
+		"description": "Your API Description",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18846146"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "reviews",
+							"item": [
+								{
+									"name": "find All By User Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:userId/reviews",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":userId",
+												"reviews"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/users/:userId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														":userId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "userId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"comment\": \"<string>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"comment\": \"<string>\"\n  }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find Byid",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"reviews\": [\n    {\n      \"id\": \"<integer>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"address\": {\n    \"id\": \"<integer>\",\n    \"street\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"city\": \"<string>\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"B@yahoo.com\",\n    \"password\": \"8765432\",\n    \"firstName\": \"Mohamed\",\n    \"lastName\": \"Mostafa\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"reviews\": [\n    {\n      \"id\": \"<integer>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"address\": {\n    \"id\": \"<integer>\",\n    \"street\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"city\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "find All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": "{{baseUrl}}/users"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ],\n    \"address\": {\n      \"id\": \"<integer>\",\n      \"street\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"city\": \"<string>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ],\n    \"address\": {\n      \"id\": \"<integer>\",\n      \"street\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"city\": \"<string>\"\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "add New",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"NewUser@yahoo.com\",\n  \"password\": \"123456\",\n  \"firstName\": \"Muhammad\",\n  \"lastName\": \"Mustafa\",\n  \"address\": {\n    \"street\": \"Court Street\",\n    \"zip\": \"123456\",\n    \"city\": \"Iowa\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/users"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"reviews\": [\n    {\n      \"id\": \"<integer>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"address\": {\n    \"id\": \"<integer>\",\n    \"street\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"city\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "find Byid",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reviews/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"comment\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update 1",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"comment\": \"HelloWorld\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reviews/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"comment\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/reviews/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "find All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": "{{baseUrl}}/reviews"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/reviews"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"comment\": \"<string>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"comment\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "add New",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"comment\": \"New Review\",\n  \"userId\": \"1\",\n  \"productId\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/reviews"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"comment\": \"<string>\",\n  \"userId\": \"<integer>\",\n  \"productId\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/reviews"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "prodcuts",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "find Byid",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/prodcuts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"prodcuts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/prodcuts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"prodcuts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"price\": \"<double>\",\n  \"rating\": \"<integer>\",\n  \"reviews\": [\n    {\n      \"id\": \"<integer>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"comment\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"UpdatedProduct\",\n  \"price\": \"50\",\n  \"rating\": \"50\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/prodcuts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"prodcuts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"price\": \"<double>\",\n  \"rating\": \"<integer>\",\n  \"categoryId\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/prodcuts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"prodcuts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/prodcuts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"prodcuts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/prodcuts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"prodcuts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "filter",
+					"item": [
+						{
+							"name": "filter",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/prodcuts/filter?minPrice=100&categoryId=1&name=Filtered",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"prodcuts",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "minPrice",
+											"value": "100",
+											"description": "(Required) "
+										},
+										{
+											"key": "categoryId",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "name",
+											"value": "Filtered",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/prodcuts/filter?minPrice=<double>&categoryId=<integer>&name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"prodcuts",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "minPrice",
+													"value": "<double>",
+													"description": "(Required) "
+												},
+												{
+													"key": "categoryId",
+													"value": "<integer>",
+													"description": "(Required) "
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "filter-by-price",
+					"item": [
+						{
+							"name": "More Than",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/prodcuts/filter-by-price?minPrice=<double>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"prodcuts",
+										"filter-by-price"
+									],
+									"query": [
+										{
+											"key": "minPrice",
+											"value": "<double>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/prodcuts/filter-by-price?minPrice=<double>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"prodcuts",
+												"filter-by-price"
+											],
+											"query": [
+												{
+													"key": "minPrice",
+													"value": "<double>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "filter-by-name",
+					"item": [
+						{
+							"name": "find By Name Containing",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/prodcuts/filter-by-name?name=Name",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"prodcuts",
+										"filter-by-name"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Name",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/prodcuts/filter-by-name?name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"prodcuts",
+												"filter-by-name"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "filter-by-categoryId-price",
+					"item": [
+						{
+							"name": "find By Category Id And Less Than",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/prodcuts/filter-by-categoryId-price?categoryId=1&maxPrice=300",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"prodcuts",
+										"filter-by-categoryId-price"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "maxPrice",
+											"value": "300",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/prodcuts/filter-by-categoryId-price?categoryId=<integer>&maxPrice=<double>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"prodcuts",
+												"filter-by-categoryId-price"
+											],
+											"query": [
+												{
+													"key": "categoryId",
+													"value": "<integer>",
+													"description": "(Required) "
+												},
+												{
+													"key": "maxPrice",
+													"value": "<double>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "find All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": "{{baseUrl}}/prodcuts"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/prodcuts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"rating\": \"<integer>\",\n    \"reviews\": [\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"comment\": \"<string>\"\n      }\n    ]\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "add New",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"MyProduct\",\n  \"price\": \"1000\",\n  \"rating\": \"5\",\n  \"categoryId\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/prodcuts"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"price\": \"<double>\",\n  \"rating\": \"<integer>\",\n  \"categoryId\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/prodcuts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "find Byid",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categories/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"products\": [\n    {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"price\": \"<double>\",\n      \"rating\": \"<integer>\",\n      \"reviews\": [\n        {\n          \"id\": \"<integer>\",\n          \"comment\": \"<string>\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"comment\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"price\": \"<double>\",\n      \"rating\": \"<integer>\",\n      \"reviews\": [\n        {\n          \"id\": \"<integer>\",\n          \"comment\": \"<string>\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"comment\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Cloths\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categories/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": "{{baseUrl}}/categories"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"products\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"rating\": \"<integer>\",\n        \"reviews\": [\n          {\n            \"id\": \"<integer>\",\n            \"comment\": \"<string>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"comment\": \"<string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"rating\": \"<integer>\",\n        \"reviews\": [\n          {\n            \"id\": \"<integer>\",\n            \"comment\": \"<string>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"comment\": \"<string>\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"products\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"rating\": \"<integer>\",\n        \"reviews\": [\n          {\n            \"id\": \"<integer>\",\n            \"comment\": \"<string>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"comment\": \"<string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"rating\": \"<integer>\",\n        \"reviews\": [\n          {\n            \"id\": \"<integer>\",\n            \"comment\": \"<string>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"comment\": \"<string>\"\n          }\n        ]\n      }\n    ]\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Electronics\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/categories"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "find Byid",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/addresses/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"addresses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/addresses/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"addresses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"street\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"city\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"street\": \"South Street\",\n  \"zip\": \"12345\",\n  \"city\": \"Cairo\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/addresses/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"addresses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"street\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"city\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/addresses/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"addresses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/addresses/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"addresses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/addresses/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"addresses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "addresses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": "{{baseUrl}}/addresses"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/addresses"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"street\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"city\": \"<string>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"street\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"city\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "addresses",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"street\": \"North Street\",\n  \"zip\": \"52556\",\n  \"city\": \"Fairfield\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/addresses"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"street\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"city\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/addresses"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AOP",
+			"item": [
+				{
+					"name": "Exception",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"comment\": \"string\",\r\n  \"userId\": 1,\r\n  \"productId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/reviews"
+					},
+					"response": []
+				},
+				{
+					"name": "ExceptionPass",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "AOP-IS-AWESOME",
+								"value": "\"false\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"comment\": \"string\",\r\n  \"userId\": 1,\r\n  \"productId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/reviews"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
