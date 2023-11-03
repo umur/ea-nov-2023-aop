@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.assginments.lab.aspect.Calculate;
 import com.assginments.lab.dto.Generic.GenericDto;
 import com.assginments.lab.dto.Generic.GenericNewDto;
 import com.assginments.lab.entity.Generic.GenericEntity;
@@ -22,6 +23,7 @@ public class GenericController<TEntity extends GenericEntity, TDto extends Gener
 
     // findAll
     @GetMapping
+    @Calculate
     public List<TDto> findAll() {
         var res = service.findAll();
         return res;
@@ -29,24 +31,28 @@ public class GenericController<TEntity extends GenericEntity, TDto extends Gener
 
     // findById
     @GetMapping("{id}")
+    @Calculate
     public TDto findByid(@PathVariable int id) {
         return service.findById(id);
     }
 
     // Add
     @PostMapping
-    public void addNew(TNewEntityDto entityDto) {
+    @Calculate
+    public void addNew(@RequestBody TNewEntityDto entityDto) {
         service.add(entityDto);
     }
 
     // update
     @PutMapping("{id}")
+    @Calculate
     public void update(@PathVariable int id, @RequestBody TNewEntityDto updatedDto) {
         service.update(id, updatedDto);
     }
 
     // remove
     @DeleteMapping("{id}")
+    @Calculate
     public void delete(@PathVariable int id) {
         service.remove(id);
     }
