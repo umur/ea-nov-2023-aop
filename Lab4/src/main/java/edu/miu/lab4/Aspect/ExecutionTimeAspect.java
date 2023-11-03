@@ -18,7 +18,7 @@ import java.util.Date;
 public class ExecutionTimeAspect {
     private final ActivityLogRepo activityLogRepo;
 
-    @Around(value = "@annotation(ExcutionTime)")
+    @Around(value = "@annotation(ExecutionTime)")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
         Object result = joinPoint.proceed();
