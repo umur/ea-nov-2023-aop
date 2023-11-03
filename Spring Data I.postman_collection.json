@@ -1966,6 +1966,53 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "AOP",
+			"item": [
+				{
+					"name": "Exception",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"comment\": \"string\",\r\n  \"userId\": 1,\r\n  \"productId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/reviews"
+					},
+					"response": []
+				},
+				{
+					"name": "ExceptionPass",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "AOP-IS-AWESOME",
+								"value": "\"false\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"comment\": \"string\",\r\n  \"userId\": 1,\r\n  \"productId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/reviews"
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"variable": [
