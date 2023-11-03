@@ -1,0 +1,39 @@
+package edu.miu.lab4.Service.Impl;
+
+import edu.miu.lab4.Model.Review;
+import edu.miu.lab4.Repository.ReviewRepo;
+import edu.miu.lab4.Service.ReviewService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+public class ReviewServiceImpl implements ReviewService {
+    private  final ReviewRepo reviewRepo;
+    @Override
+    public Review findById(int id) {
+        return reviewRepo.findById(id);
+    }
+
+    @Override
+    public Review saveReview(Review review) {
+        return reviewRepo.save(review);
+    }
+
+    @Override
+    public Review updateReview(int id, Review review) {
+        return reviewRepo.updateById(id,review);
+    }
+
+    @Override
+    public void deleteReview(int id) {
+        reviewRepo.deleteById(id);
+    }
+
+    @Override
+    public List<Review> findAllByProductId(int id) {
+        return reviewRepo.findAllByProductId(id);
+    }
+}
