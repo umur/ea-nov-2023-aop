@@ -1,0 +1,14 @@
+POST  localhost:8080/categories
+Content-Type: application/json
+
+{
+  "name": "Category 1 "
+}
+###
+
+GET  localhost:8080/categories
+Content-Type: application/json
+
+{
+"name": "Category 1 "
+}

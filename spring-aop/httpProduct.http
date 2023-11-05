@@ -1,0 +1,25 @@
+POST  localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "Product 3",
+  "price": 60,
+  "rating": 0,
+  "category": {"id" : 1}
+}
+###
+
+PUT  localhost:8080/products/3
+Content-Type: application/json
+
+{
+"name": "Product 3",
+"price": 80,
+"rating": 0,
+"category": {"id" : 1}
+}
+
+###
+
+GET  localhost:8080/products
+Content-Type: application/json
