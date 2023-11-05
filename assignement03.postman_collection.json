@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "84042e3c-a9a0-4981-8988-17931917fb87",
+		"name": "assignement04",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8508551"
+	},
+	"item": [
+		{
+			"name": "getProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creactCategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "AOP-IS-AWESOME",
+						"value": "MAINUDDIN",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Apple accessories\"//,\n    // \"products\": [\n    //     {\n    //         \"name\": \"Air Bud Gen 2\",\n    //         \"price\": 11.89,\n    //         \"rating\": 3.4\n    //     }\n    //]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

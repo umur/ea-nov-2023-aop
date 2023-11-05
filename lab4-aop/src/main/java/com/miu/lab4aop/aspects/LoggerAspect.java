@@ -34,7 +34,6 @@ public class LoggerAspect {
 
     @Around("@annotation(org.springframework.web.bind.annotation.PostMapping)")
     public Object checkHeader(ProceedingJoinPoint pjp) throws Throwable {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         String header = request.getHeader("AOP-IS-AWESOME");
         System.out.println("AOP-IS-AWESOME: " + header);
         if (header == null) {
