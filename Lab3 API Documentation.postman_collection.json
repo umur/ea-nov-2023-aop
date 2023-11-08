@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "9bb23644-9233-4da2-ba05-1b40eb9443df",
+		"name": "Lab3 API Documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30368554"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": 1,\n        \"name\": \"Smartphone\",\n        \"price\": 799.99,\n        \"rating\": \"4.5\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"Electronics\",\n            \"products\": []\n        },\n        \"reviews\": []\n    },\n    {\n        \"id\": 2,\n        \"name\": \"T-Shirt\",\n        \"price\": 29.99,\n        \"rating\": \"4.0\",\n        \"category\": {\n            \"id\": 2,\n            \"name\": \"Clothing\",\n            \"products\": []\n        },\n        \"reviews\": []\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Java Programming Book\",\n        \"price\": 49.99,\n        \"rating\": \"4.8\",\n        \"category\": {\n            \"id\": 3,\n            \"name\": \"Books\",\n            \"products\": []\n        },\n        \"reviews\": []\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Refrigerator\",\n        \"price\": 999.99,\n        \"rating\": \"4.7\",\n        \"category\": {\n            \"id\": 4,\n            \"name\": \"Home Appliances\",\n            \"products\": []\n        },\n        \"reviews\": []\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Basketball\",\n        \"price\": 19.99,\n        \"rating\": \"4.2\",\n        \"category\": {\n            \"id\": 5,\n            \"name\": \"Sports Equipment\",\n            \"products\": []\n        },\n        \"reviews\": []\n    }\n]\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "getting addresses",
+					"item": [
+						{
+							"name": "getting all addresses",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "getting address by id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "posting address",
+					"item": [
+						{
+							"name": "adding address",
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "adding address",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"street\": \"789 Elm Drive\",\n  \"city\": \"Nowhere\",\n  \"zip\": \"67890\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/addresses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adding address",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "adding address",
+									"host": [
+										"adding address"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "update address",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"street\": \"303 Pine Road\",\n  \"city\": \"Noplace\",\n  \"zip\": \"35791\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/addresses/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleting address",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/addresses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": 2,\n        \"name\": \"Clothing\",\n        \"products\": []\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n        \"id\": 1,\n        \"email\": \"john.doe@example.com\",\n        \"password\": \"password123\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"reviews\": [],\n        \"address\": null\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n    \"id\": 2,\n    \"email\": \"jane.doe@example.com\",\n    \"password\": \"password456\",\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"reviews\": [],\n    \"address\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
