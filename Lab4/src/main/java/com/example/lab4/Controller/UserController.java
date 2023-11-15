@@ -1,7 +1,7 @@
 package com.example.lab4.Controller;
 
 import com.example.lab4.Model.User;
-import edu.miu.Service.UserService;
+import com.example.lab4.Service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,10 +20,10 @@ public class UserController {
     public User saveUser(@RequestBody User user){
         return userService.saveUser(user);
     }
-    @PutMapping("/{id}")
+  /*  @PutMapping("/{id}")
     public User updateUser(@RequestBody User user,@PathVariable int id){
         return userService.updateUser(id,user);
-    }
+    }*/
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable int id){
         userService.deleteUser(id);

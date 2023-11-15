@@ -1,7 +1,7 @@
 package com.example.lab4.Controller;
 
 import com.example.lab4.Model.Category;
-import edu.miu.Service.CategoryService;
+import com.example.lab4.Service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,10 +20,10 @@ public class CategoryController {
     public Category saveCategory(@RequestBody Category category){
         return categoryService.saveCategory(category);
     }
-    @PutMapping("/{id}")
-    public Category updateCategory(@RequestBody Category category,@PathVariable int id){
+   /* @PutMapping("/{id}")
+    public Category updateCategory(@PathVariable int id,@RequestBody Category category){
         return categoryService.updateCategory(id,category);
-    }
+    }*/
     @DeleteMapping("/{id}")
     public void deleteCategory(@PathVariable int id){
         categoryService.deleteCategory(id);

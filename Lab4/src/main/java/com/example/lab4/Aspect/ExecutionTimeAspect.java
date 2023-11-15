@@ -3,6 +3,7 @@ package com.example.lab4.Aspect;
 import com.example.lab4.Model.ActivityLog;
 import com.example.lab4.Repository.ActivityLogRepo;
 import lombok.RequiredArgsConstructor;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -18,10 +19,10 @@ import java.util.Date;
 public class ExecutionTimeAspect {
     private final ActivityLogRepo activityLogRepo;
 
-    @Around(value = "@annotation(com.example.lab4.Aspect.ExecutionTime)")
+    @Around("@annotation(com.example.lab4.Aspect.ExecutionTime)")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
-        Object result = joinPoint.proceed();
+Object result=joinPoint.proceed();
         long duration = System.currentTimeMillis() - startTime;
 
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();

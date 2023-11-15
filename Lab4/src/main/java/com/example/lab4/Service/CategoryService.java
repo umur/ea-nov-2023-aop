@@ -1,4 +1,4 @@
-package edu.miu.Service;
+package com.example.lab4.Service;
 
 
 import com.example.lab4.Model.Category;
@@ -6,6 +6,6 @@ import com.example.lab4.Model.Category;
 public interface CategoryService {
     Category findById(int id);
     Category saveCategory(Category category);
-    Category updateCategory(int id,Category category);
+   // Category updateCategory(int id,Category category);
     void deleteCategory(int id);
 }

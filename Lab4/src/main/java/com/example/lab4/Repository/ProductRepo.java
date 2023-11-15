@@ -11,7 +11,7 @@ import java.util.List;
 public interface ProductRepo extends ListCrudRepository<Product,Integer> {
     Product findById(int id);
 
-    Product updateById(int id,Product product);
+   // Product updateById(int id,Product product);
     void deleteById(int id);
     List<Product> findAllByPriceGreaterThan(double Price);
     List<Product> findAllByCategoryAndPriceLessThan(Category category, double price);

@@ -1,9 +1,9 @@
-package edu.miu.Service.Impl;
+package com.example.lab4.Service.Impl;
 
-import com.example.lab4.Aspect.ExecutionTime;
 import com.example.lab4.Model.Review;
 import com.example.lab4.Repository.ReviewRepo;
-import edu.miu.Service.ReviewService;
+import com.example.lab4.Aspect.ExecutionTime;
+import com.example.lab4.Service.ReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -23,10 +23,10 @@ public class ReviewServiceImpl implements ReviewService {
         return reviewRepo.save(review);
     }
 
-    @Override
+    /*@Override
     public Review updateReview(int id, Review review) {
         return reviewRepo.updateById(id,review);
-    }
+    }*/
 
     @Override
     public void deleteReview(int id) {

@@ -1,9 +1,9 @@
-package edu.miu.Service.Impl;
+package com.example.lab4.Service.Impl;
 
 import com.example.lab4.Aspect.ExecutionTime;
 import com.example.lab4.Model.Category;
 import com.example.lab4.Repository.CategoryRepo;
-import edu.miu.Service.CategoryService;
+import com.example.lab4.Service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -21,10 +21,10 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryRepo.save(category);
     }
 
-    @Override
+   /* @Override
     public Category updateCategory(int id, Category category) {
         return categoryRepo.updateById(id,category);
-    }
+    }*/
 
     @Override
     public void deleteCategory(int id) {

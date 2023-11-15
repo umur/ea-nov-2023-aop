@@ -1,10 +1,10 @@
-package edu.miu.Service.Impl;
+package com.example.lab4.Service.Impl;
 
-import com.example.lab4.Aspect.ExecutionTime;
 import com.example.lab4.Model.Category;
 import com.example.lab4.Model.Product;
 import com.example.lab4.Repository.ProductRepo;
-import edu.miu.Service.ProductService;
+import com.example.lab4.Service.ProductService;
+import com.example.lab4.Aspect.ExecutionTime;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -24,10 +24,10 @@ public class ProductServiceImpl implements ProductService {
         return productRepo.save(product);
     }
 
-    @Override
+   /* @Override
     public Product updateProduct(int id, Product product) {
         return productRepo.updateById(id,product);
-    }
+    }*/
 
     @Override
     public void deleteProduct(int id) {

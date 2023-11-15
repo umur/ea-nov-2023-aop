@@ -12,7 +12,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 @Component
 public class AopIsAwesomeHeaderAspect {
 
-    @Before(value = "within(edu.miu.Service.*) && @annotation(org.springframework.web.bind.annotation.PostMapping)")
+    @Before("within(com.example.lab4.Service.*) && @annotation(org.springframework.web.bind.annotation.PostMapping)")
     public void checkHeader(JoinPoint joinPoint) {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
         String header = request.getHeader("AOP-IS-AWESOME");

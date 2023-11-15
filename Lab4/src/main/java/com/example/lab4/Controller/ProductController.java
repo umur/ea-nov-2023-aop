@@ -3,7 +3,7 @@ package com.example.lab4.Controller;
 
 import com.example.lab4.Model.Category;
 import com.example.lab4.Model.Product;
-import edu.miu.Service.ProductService;
+import com.example.lab4.Service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/products")
 public class ProductController {
+
     private final ProductService productService;
 
     @GetMapping("/{id}")
@@ -24,10 +25,10 @@ public class ProductController {
     public Product saveProduct(@RequestBody Product product){
         return productService.saveProduct(product);
     }
-    @PutMapping("/{id}")
+   /* @PutMapping("/{id}")
     public Product updateProduct(@RequestBody Product product,@PathVariable int id){
         return productService.updateProduct(id,product);
-    }
+    }*/
     @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable int id){
         productService.deleteProduct(id);
@@ -37,7 +38,7 @@ public class ProductController {
         return productService.getProductsMoreThan(price);
     }
 @GetMapping( "/inCatAndLessmaxPrice/")
-List<Product> findAllByCategoryAndPriceLessThan(@RequestParam Category category,@RequestParam double maxPrice){
+List<Product> findAllByCategoryAndPriceLessThan(@RequestParam Category category, @RequestParam double maxPrice){
         return productService.findAllByCategoryAndPriceLessThan(category,maxPrice);
 }
 @GetMapping("/ProductsNameContainsKeyword/{keyword}")
